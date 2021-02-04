@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: feign
+
+server:
+  port: 3008
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        #可以用*來暴露所有監控端點
+        include: '*'
+
+ribbon:
+  ConnectTimeout: 1000
+  ReadTimeout: 1000
+
+item-service:
+  ribbon:
+    ConnectTimeout: 500
+    ReadTimeout: 1000
+    MaxAutoRetriesNextServer: 2
+    MaxAutoRetries: 1
+
+feign:
+  circuitbreaker:
+    enabled: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 500
+

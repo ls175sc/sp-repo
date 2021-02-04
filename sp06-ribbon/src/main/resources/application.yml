@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: ribbon
+
+server:
+  port: 3001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
+
+ribbon:
+  #更換實例的次數
+  MaxAutoRetriesNextServer: 2
+  #當前實例重度次數，嘗試失敗會更換下一個實例
+  MaxAutoRetries: 1
+  #對連接超時、讀取超時都進行重試
+  OkToRetryOnAllOperations: true
