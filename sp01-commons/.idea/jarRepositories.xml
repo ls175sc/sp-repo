@@ -23,6 +23,11 @@
     </remote-repository>
     <remote-repository>
       <option name="id" value="spring-snapshots" />
+      <option name="name" value="Spring Snapshots" />
+      <option name="url" value="https://repo.spring.io/snapshot" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="spring-snapshots" />
       <option name="name" value="spring-snapshots" />
       <option name="url" value="http://repo.spring.io/libs-snapshot" />
     </remote-repository>

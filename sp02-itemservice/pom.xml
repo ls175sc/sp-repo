@@ -41,12 +41,6 @@
             <groupId>com.tedu</groupId>
             <artifactId>sp01-commons</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.tedu</groupId>
-            <artifactId>sp01-commons</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
