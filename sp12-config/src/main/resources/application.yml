@@ -7,8 +7,8 @@ spring:
       server:
         git:
 #          uri: https://github.com/ls175sc/sp-repo/sp-config
-          uri: https://github.com/ls175sc/sp-repo/sp-config.git
-          search-paths: sp-repo/config
+          uri: https://github.com/ls175sc/sp-repo.git
+          search-paths: sp-config/config
           username: ls175sc
           password: 175751Ac
 
