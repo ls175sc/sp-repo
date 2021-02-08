@@ -1,13 +1,11 @@
 spring:
   application:
     name: config-server
-
   cloud:
     config:
       server:
         git:
-#          uri: https://github.com/ls175sc/sp-repo/sp-config
-          uri: https://github.com/ls175sc/sp-repo.git
+          uri: https://github.com/ls175sc/sp-repo
           search-paths: sp-config/config
           username: ls175sc
           password: 175751Ac
