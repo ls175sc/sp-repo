@@ -20,13 +20,13 @@ public class UserController {
     @GetMapping("/{userId}")
     public JsonResult<User> getUser(@PathVariable String userId) {
         log.info("get user, userId=" + userId);
-        User u = userService.getUser(userId);
+        User u = userService.getUser(Integer.parseInt(userId));
         return JsonResult.okay(u);
     }
 
     @GetMapping("/{userId}/score")
     public JsonResult addScore(@PathVariable String userId, String score) {
-        userService.addScore(userId, score);
+        userService.addScore(Integer.parseInt(userId), Integer.parseInt(score));
         return JsonResult.okay();
     }
 }

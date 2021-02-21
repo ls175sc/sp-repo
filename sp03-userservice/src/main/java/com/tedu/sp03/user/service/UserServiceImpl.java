@@ -20,7 +20,7 @@ public class UserServiceImpl implements UserService {
     private String userJson;
 
     @Override
-    public User getUser(String id) {
+    public User getUser(Integer id) {
         log.info("users json string : " + userJson);
         List<User> list = JsonUtil.from(userJson, new TypeReference<List<User>>() {
         });
@@ -29,11 +29,11 @@ public class UserServiceImpl implements UserService {
                 return u;
             }
         }
-        return new User(Integer.parseInt(id), "name-" + id, "pwd-" + id);
+        return new User(id, "name-" + id, "pwd-" + id);
     }
 
     @Override
-    public void addScore(String id, String score) {
+    public void addScore(Integer id, Integer score) {
         //TODO 這里增加積分
         log.info("user " + id + " - 增加積分 " + score);
     }
