@@ -18,9 +18,9 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/{userId}")
-    public JsonResult<User> getUser(@PathVariable String userId) {
+    public JsonResult<User> getUser(@PathVariable Integer userId) {
         log.info("get user, userId=" + userId);
-        User u = userService.getUser(Integer.parseInt(userId));
+        User u = userService.getUser(userId);
         return JsonResult.okay(u);
     }
 
